@@ -442,7 +442,6 @@ try {
     solvedBonus++;
   })();
 
-  /*
   (function UseNestedDestructuring() {
     let obj = {
       add: (x, y) => x + y,
@@ -450,15 +449,17 @@ try {
       arr: [1, 2, 3]
     };
 
-    
     // Use destructuring to change the 3 statements below into 1 statement.
     //let a = obj.add;
     //let b = obj.city.name;
     //let c = obj.arr.slice(1);
-    let {add: a, city: {name}: b, c}  = obj;
+    const {
+      add: a,
+      city: { name: b },
+      arr: [, ...c]
+    } = obj;
 
     console.log(b);
-
 
     // Don't make changes below this line
 
@@ -468,7 +469,6 @@ try {
 
     solvedBonus++;
   })();
-  */
 
   (function UseDestructuring() {
     const arr = [1, 2, 3, 4];
