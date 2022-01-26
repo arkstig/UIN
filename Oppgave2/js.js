@@ -29,7 +29,8 @@ const users = [
   
   const handleSearch = () => {
     // TODO: Hent ut verdien fra søke input feltet
-    const searchName = "";
+    const searchName = ("")
+    
     // TODO: Sjekk om searchName ekisterer
     if ("") {
       // TODO: Bruk .find for å finne navnet til den brukeren som matcher søkeordet
