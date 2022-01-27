@@ -8,32 +8,40 @@ const numbers = [1, 4, 2, 3, 8, 7, 6, 5];
 
 const getGuess = () => {
   // TODO: Bruk querySelectorAll på guessUl for å hente ut alle input feltene
-  const answers = document.querySelectorAll("guessUl");
+  const answers = document.querySelectorAll("input");
   // TODO: Bruk .map for å hente ut verdiene i input feltene
-  return Array.from(answers).map();
+  return Array.from(answers).map((answer) => answer.value);
+
 };
 
 const checkNumberSeq = () => {
   const guess = getGuess();
   let isCorrect = numbers.sort().join("") === guess.join("");
   if (isCorrect) {
-    alert("Du sorterte riktig");
+      alert("Du sorterte riktig");
+  }
+  if (!isCorrect) {
+      alert('wrong')
   }
 };
 
+
 const addInputUI = () => {
     // TODO: Bruk for-of (eller vanlig for-løkke) og guessUl til å lage li-elementer med input elementer for å kunne skrive inn hva som skal sorteres
-    for (let list of numbers) {
-      const li = `<li> ${document.createElement("input")} </li>`;
-      guessUl.innerHTML += li;
-    }
-  };
-
+    for (let element of numbers) {
+    
+        const li = `<li><input></input></li>`;
+        guessUl.innerHTML += li;
+      }
+    
+    };
+//console.log(guessUl);
 const addNumbersUI = () => {
   // TODO: Bruk for-of (eller vanlig for-løkke) og numbersUl til å lage li-elementer med tallene som skal sorteres
   for (let value of numbers) {
     const li = value;
-    numbersUl.innerHTML += `${li}, `;
+    numbersUl.innerHTML += `<li>${li}</li>`
+    // numbersUl.innerHTML += ${li}, ;
   }
 };
 
@@ -43,5 +51,7 @@ const createUI = () => {
 };
 
 createUI();
+
+
 
 button.addEventListener("click", checkNumberSeq);
