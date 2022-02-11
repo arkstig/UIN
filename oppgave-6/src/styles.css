@@ -1,4 +1,4 @@
-/* Base styling */
+
 
 * {
     box-sizing: border-box;
@@ -38,7 +38,7 @@
  }
  
  
- #form {
+ form {
      display: flex;
      flex-direction: column;
      gap: 10px;
