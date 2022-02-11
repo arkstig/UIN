@@ -25,7 +25,7 @@ function Form() {
   )
 }
 
-function TodoList(){
+function TodoList() {
   return (
 <section id="todo">
             
