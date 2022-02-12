@@ -27,7 +27,7 @@ header {
 
 h1 {
   font-size: 55px;
-  color: #8d5be9;
+  color: white;
   align-items: center;
   width: 900px;
   font-weight: 600;
@@ -144,4 +144,9 @@ input:focus {
     border-color: 1px solid #819dad;
     outline: none;
     color: white;
+  }
+
+  nav {
+      color: white;
+      font-weight: 400;
   }
