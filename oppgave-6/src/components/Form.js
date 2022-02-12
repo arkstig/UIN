@@ -42,7 +42,6 @@ export default function Form({setTodos}) {
             name="content" 
             label="Innhold:" 
             type="textarea"
-            rows={2}
             handleChange={handleChangeContent} 
             value={content} />
               <button id="formbutton" type="submit">
