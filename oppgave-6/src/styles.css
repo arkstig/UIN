@@ -153,10 +153,12 @@ article {
 
 article:hover {
   background-color: #decdfd;
+  transition: 0.5s;
 }
 
 input:hover {
   background-color: #decdfd;
+  transition: 0.5s;
 }
 
 input:focus {
