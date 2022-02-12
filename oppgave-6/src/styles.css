@@ -165,4 +165,7 @@ input:focus {
   nav {
       color: white;
       font-weight: 400;
+      border: 1px solid #1f295b36;
+      padding: 10px 20px 10px 20px;
+      border-radius: 5px;
   }
