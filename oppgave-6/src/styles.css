@@ -15,19 +15,26 @@ main {
 
 header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   padding: 50px 70px 50px 70px;
   align-items: center;
   box-shadow: 0px -8px 20px grey;
   background-color: #819dad;
   margin-bottom: 100px;
+  text-align: center;
 }
 
 h1 {
   font-size: 55px;
-  color: black;
+  color: #8d5be9;
+  align-items: center;
+  width: 900px;
   font-weight: 600;
+  background-color: black;
+  padding: 30px 0px 30px 0px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 h2 {
@@ -98,7 +105,7 @@ button {
   transition: 0.5s;
 }
 button:hover {
-  background-color: #819dad;
+  background-color: white;
   cursor: pointer;
   color: #1f295b;
   box-shadow: inset 0px 0px 2px #858585;
@@ -118,10 +125,23 @@ button:hover {
 article {
   padding: 15px;
   border-radius: 5px;
-  background: rgb(219, 218, 226);
-  background: linear-gradient(
-    0deg,
-    rgba(219, 218, 226, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background-color: white;
+ 
 }
+
+article:hover {
+    background-color: #decdfd;
+}
+
+input:hover {
+    background-color: #decdfd;
+    
+
+  }
+
+input:focus {
+    background-color: #819dad;
+    border-color: 1px solid #819dad;
+    outline: none;
+    color: white;
+  }
