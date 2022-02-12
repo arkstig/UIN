@@ -33,14 +33,14 @@ export default function Form({setTodos}) {
           <Input 
             id="title" 
             name="title" 
-            label="Tittel" 
+            label="Tittel:" 
             type="text" 
             handleChange={handleChangeTitle} 
             value={title} />
           <Input 
             id="content" 
             name="content" 
-            label="Innhold" 
+            label="Innhold:" 
             type="textarea"
             rows={2}
             handleChange={handleChangeContent} 
