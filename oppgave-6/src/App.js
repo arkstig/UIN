@@ -1,70 +1,27 @@
-import './styles.css';
-
-function Header() {
-  return (
-    <header>
-        
-            <h1>HIOF</h1>
-            <nav>Stig Ark</nav>
-        
-    </header>
-  )
-}
-
-function Form() {
-  return (
-    <section id="section1">
-    <form>
-        <label for="title"><h2>Title</h2></label>
-        <input type="text" id="title"/>
-        <label for="content"><h2>Content</h2></label>
-        <textarea id="content" rows="6" cols="40"></textarea>
-        <button id="formbutton" type="submit" value="submit">Add</button>
-    </form>
-</section>
-  )
-}
-
-function TodoList() {
-  return (
-<section id="todo">
-            
-        <Todo />
-        <Todo />
-        <Todo />
-        <Todo />
-        <Todo />
-        <Todo />
-        </section>
-  )
-}
-
-function Todo() {
-  return (
-    <article>
-                <h3>Todotitle</h3>
-                <p>Lorem ipsum dolor sit amet. Paragraph Todo...</p>
-                <Button />
-            </article>
-  )
-}
-
-function Button() {
-  return (
-    <button id="complete">Complete</button>
-  )
-}
+import { useState } from "react";
+import "./styles.css";
+import Form from "./components/Form";
+import Header from "./components/Header";
+import TodoList from "./components/TodoList";
 
 export default function App() {
+  const [todos, setTodos] = useState([]);
+  console.log(todos);
+
+  const removeTodo = (id) => {
+    const oldTodos = [...todos];
+    const todosLeft = oldTodos.filter((todo) => todo.id !== id);
+    setTodos(todosLeft);
+  };
+
   return (
     <>
-    <Header />
-    <main>
-    <Form />
-    <TodoList />
-    </main>
+      <Header />
+      <main>
+        <Form setTodos={setTodos} />
+        <h4>Mine Todos</h4>
+        <TodoList  removeTodo={removeTodo} todos={todos} />
+      </main>
     </>
   );
 }
-
-

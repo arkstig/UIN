@@ -1,0 +1,37 @@
+For å lagre noe er array fint ja. Så kan bruke state hvor du 
+har tom array til å starte med. ID er lurt å ha med. Når du da 
+lagrer alt innholdet så lagrer du det som et object og 
+sender det til den tomme listen. [{...data her...}].
+
+F.eks const [todoList, setTodoList] = useState([]). 
+Når du lager en ny en via skjema så blir det 
+setTodoList((prev) =>  [...prev, {dataen fra skjema}]).
+
+const addTodo = () => {
+  const todoCopy = todoList
+  todoCopy.push({din data})
+  setTodoList(todoCopy)
+}
+
+Når du kommer til "complete" kan du enten filtrere todoList med 
+.filter() for å fjerne den todo`en som ble trykket på.
+
+ 
+Alternativt kan du finne todo'en som ble trykket på i 
+todoList med .find() 
+og legge til {completed: true}. Hvis det ga mening?
+
+ 
+Når du sender skjema og trigger handleSubmit. Hvis du på input 
+har onChange som trigger oppdatering av title og content så kan 
+du hente ut de verdiene i handleSubmit da dataen er lagre på title 
+og content.Hvis du console.log(title, content)
+så skal du da se det som ble skrevet inn
+
+{id: 1, title, content}
+Etter det kan du da nulle ut verdiene hvis du ønsker med 
+f.eks setTitle('') setContent('')
+Så kan du lage en ny todo om du ønsker å sende skjema på nytt
+id: 1 kan du ikke hardkode da for da ender du opp med at alle 
+todos har samme id og du finner ikke igjen rett todo i ettertid
+
