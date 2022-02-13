@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Input from "./Input";
+import { v4 as uuid } from 'uuid';
+
 
 export default function Form({setTodos}) {
     const [title, setTitle] = useState('')
   
     const [content, setContent] = useState('')
   
-    const createId = () => Math.floor(Math.random(0, 1) * 1000);
+    //const createId = () => Math.floor(Math.random(0, 1) * 1000);
 
     const handleChangeTitle = (event) => {
       console.log('changed title')
@@ -20,7 +22,7 @@ export default function Form({setTodos}) {
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      const id = createId();
+      const id = uuid();
       setTodos((prev) => [...prev, {id, title, content }]);
       setTitle('') 
       setContent('')

@@ -33,14 +33,14 @@
      margin-bottom: 100px;
  }
  
- #title {
+ title {
      width: 50%;
  }
  
  
  form {
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
      gap: 10px;
     
  }
